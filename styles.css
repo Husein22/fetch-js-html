@@ -1,0 +1,10 @@
+.header{
+    width: 90%;
+    height: 200px;
+    background-color: red;
+    margin: auto;
+}
+.header img{
+    height: 90%;
+    margin:5px;
+}
