@@ -10,7 +10,7 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Services')
 .catch(err=>console.log(err))
 
 const dajUlogu=(usluga)=>{
-const rezult =document.getElementById('hrana1');
+const rezult =document.getElementById('services1');
 let work='';
 usluga.forEach(elementt => {
   ukupanBroj++;
@@ -19,10 +19,10 @@ usluga.forEach(elementt => {
     class="card-img-top" alt="..." style="height:150px">
     <div class="card-body">
       <p class="card-text">${elementt.name} </p>
-      <button type="button" onclick="fillEditData(${elementt.id})"  class="btn btn-warning" data-bs-toggle="modal"
+      <button type="button" onclick="dopuniVrijednosti(${elementt.id})"  class="btn btn-warning" data-bs-toggle="modal"
        data-bs-target="#exampleModal2" data-bs-whatever="@getbootstrap">Promijeni</button>
        <button type="button" class="btn btn-danger" onclick="izbrisiUslugu(${elementt.id})">Brisanje</button>
-       <button type="button" onclick="peikaziElement(${elementt.id})" class="btn btn-success" data-bs-toggle="modal"
+       <button type="button" onclick="prikaziElement(${elementt.id})" class="btn btn-success" data-bs-toggle="modal"
        data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap">Prikazi info</button>
     </div>
   </div>`
@@ -31,7 +31,7 @@ usluga.forEach(elementt => {
 }
 
   
-const peikaziElement=(id)=>{
+const prikaziElement=(id)=>{
   let a=0;
   const rezult =document.getElementById('ex');
   let work='';
@@ -45,18 +45,30 @@ const peikaziElement=(id)=>{
     const prikaziCijenu= document.getElementById('prikazicijenu');
     prikaziCijenu.innerHTML=elementt.price;
     const priakziSliku = document.getElementById('prikaziSliku').src=elementt.photoUrl;
-
-   
-  }
-});
-    }
+  }});
+ }
       
-   
+
+ const pretraziElement=()=>{
+  let a=0;
+  const rezult =document.getElementById('inputPolje').value;
+  let work='';
+  usluga.forEach(elementt => {
+    a++;
+    if(rezult==elementt.name){
+    const prikaziID = document.getElementById('petraziid');
+    prikaziID.innerHTML=elementt.id;
+    const prikaziIme = document.getElementById('petraziiime');
+    prikaziIme.innerHTML=elementt.name;
+    const prikaziCijenu= document.getElementById('petrazicijenu');
+    prikaziCijenu.innerHTML=elementt.price;
+    const priakziSliku = document.getElementById('pretraziSliku').src=elementt.photoUrl;
+  }});
+ }
   
   
   
-  const fillEditData = (elementtID) => {
-    
+  const dopuniVrijednosti = (elementtID) => {
     const elementt = usluga.find(elementt => elementt.id === elementtID);
     const uslugaFormId = document.getElementById('change-id');
     const uslugaName = document.getElementById('change-name');
@@ -70,13 +82,11 @@ const peikaziElement=(id)=>{
 }
 
 const izmijeniUsluge = () => { 
-
   const uslugaFormId = document.getElementById('change-id').value;;
     const uslugaName = document.getElementById('change-name').value;;
     const uslugaPrice = document.getElementById('change-price').value;;
     const uslugaImage = document.getElementById('change-image').value;;
     
-
     fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Services`, {
         method: 'PUT', 
         headers: new Headers({'content-type': 'application/json'}),

@@ -10,11 +10,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    
     <link rel="stylesheet" href="styles.css">
-   <title>Document</title>
+   <title>Seminarski rad-services</title>
     
 </head>
 <body>
-    <div class="container w-100 h-100s">
+
+
+
+  
+   <!--  <div class="container w-100 h-100s">
         <div class="row" id="todos-row">
             
         </div>
@@ -23,17 +27,30 @@
         <img src="1.webp" alt="">
     </div>
 
-<div class="drugi">
-        <input type="text" class="form-control" id="input"
-         placeholder="Search">
-         <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="PretraziUslugu" data-bs-whatever="@getbootstrap">
-         Pretrazi uslugu</button>
-    </div>
+        <input type="text" class="form-control" id="inputPolje" placeholder="Search">
+        <button type="button" onclick="pretraziElement()" class="btn btn-primary" data-bs-toggle="modal"
+       data-bs-target="#modal4" data-bs-whatever="@getbootstrap">Pretrazi uslugu</button>
+ 
     <div class="col-auto">
         <button type="button" id="dodajUslugu" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Dodaj uslugu</button>
-</div> 
+</div>  -->
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+  <!--  <img src="1.webp" alt=""> -->
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" id="inputPolje" placeholder="Type name of services..." aria-label="Search">
+      <button type="button"  class="btn btn-outline-success"   onclick="pretraziElement()" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#modal4" data-bs-whatever="@getbootstrap">Pretrazi uslugu</button>
+    </form>
+  </div>
+</nav>
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button" id="dodajUslugu" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Dodaj uslugu</button>
+</div>
     <div class="container w-150 h-150s">
-        <div class="row" id="hrana1" >
+        <div class="row" style="margin-top: 50px;" id="services1" >
             
         </div>
 
@@ -41,7 +58,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Dodaj uslugu</h5>
+                  <h5 class="modal-title" id="exampleModalLabel" >Dodaj uslugu</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modal-body">
@@ -49,11 +66,11 @@
                     <div class="mb-3">
                       <label for="todo-name" class="col-form-label">Id:</label>
                       <input type="text" class="form-control" id="add-id"  >
-                      <label for="todo-name" class="col-form-label">Name:</label>
+                      <label for="todo-name" class="col-form-label">Naziv:</label>
                       <input type="text" class="form-control" id="add-name"> 
-                      <label for="todo-name" class="col-form-label">Price:</label>
+                      <label for="todo-name" class="col-form-label">Cijena:</label>
                       <input type="text" class="form-control" id="add-price">
-                      <label for="todo-name" class="col-form-label">Url:</label>
+                      <label for="todo-name" class="col-form-label">Url slike:</label>
                       <input type="text" class="form-control" id="add-imageUrl">
                      
                     </div>
@@ -66,6 +83,8 @@
               </div>
             </div>
         </div>
+
+
 
   <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -81,15 +100,15 @@
                 <input type="text" class="form-control" id="change-id" disabled>
               </div>
             <div class="mb-3">
-              <label for="change-name" class="col-form-label">Name:</label>
+              <label for="change-name" class="col-form-label">Naziv:</label>
               <input type="text" class="form-control" id="change-name">
             </div>
             <div class="mb-3">
-              <label for="change-price" class="col-form-label">Price:</label>
+              <label for="change-price" class="col-form-label">Cijena:</label>
               <input type="text" class="form-control" id="change-price">
             </div>
             <div class="mb-3">
-              <label for="change-image" class="col-form-label">Image:</label>
+              <label for="change-image" class="col-form-label">Url slike:</label>
               <input type="text" class="form-control" id="change-image">
             </div>
             
@@ -97,51 +116,18 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="izmijeniUsluge()">Send message</button>
+          <button type="button" class="btn btn-primary" onclick="izmijeniUsluge()">Sacuvaj izmjene</button>
         </div>
       </div>
     </div>
   </div>
 
 
-  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--   <div class="modal" id="modal3" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informacije o usluzi</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="foram1">
-            <img src="" id="prikaziSliku" class="card-img-top" alt="..." >
-            <div class="mb-3">
-               <p>  Id:</label> <samp id="prikaziid"></samp></p>
-              </div>
-
-            <div class="mb-3">
-              <p>  Naziv:</label> <samp id="prikaziime"></samp></p>
-            </div>
-            <div class="mb-3">
-              <p>  Cijena:</label> <samp id="prikazicijenu"></samp></p>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-  <div class="modal" id="modal3" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
+       <h5 class="modal-title">Modal title</h5> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -171,11 +157,75 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Infromacije o usluzi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="foram1">
+            <img src="" id="prikaziSliku" class="card-img-top" alt="..." >
+            <div class="mb-3">
+               <p>  Id:</label> <samp id="prikaziid"></samp></p>
+              </div>
+
+            <div class="mb-3">
+              <p>  Naziv:</label> <samp id="prikaziime"></samp></p>
+            </div>
+            <div class="mb-3">
+              <p>  Cijena:</label> <samp id="prikazicijenu"></samp></p>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
+
+
+
+  
+
+
       
-    
+  <div class="modal" id="modal4" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title">Pretraga usluge</h5> 
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="foram1">
+            <img src="" id="pretraziSliku" class="card-img-top" alt="..." >
+            <div class="mb-3">
+               <p>  Id:</label> <samp id="petraziid"></samp></p>
+              </div>
+
+            <div class="mb-3">
+              <p>  Naziv:</label> <samp id="petraziiime"></samp></p>
+            </div>
+            <div class="mb-3">
+              <p>  Cijena:</label> <samp id="petrazicijenu"></samp></p>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
