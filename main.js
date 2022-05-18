@@ -30,7 +30,6 @@ usluga.forEach(elementt => {
   rezult.innerHTML=work;
 }
 
-  
 const prikaziElement=(id)=>{
   let a=0;
   const rezult =document.getElementById('ex');
@@ -63,10 +62,9 @@ const prikaziElement=(id)=>{
     const prikaziCijenu= document.getElementById('petrazicijenu');
     prikaziCijenu.innerHTML=elementt.price;
     const priakziSliku = document.getElementById('pretraziSliku').src=elementt.photoUrl;
-  }});
+  }
+});
  }
-  
-  
   
   const dopuniVrijednosti = (elementtID) => {
     const elementt = usluga.find(elementt => elementt.id === elementtID);
@@ -126,7 +124,6 @@ btn.onclick = function() {
     modal.style.display = "none";
   }
 }  
-
 
 const mojaForma=document.getElementById("btn");
 mojaForma.addEventListener("click",(e)=>{
