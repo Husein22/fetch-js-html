@@ -16,7 +16,7 @@ usluga.forEach(elementt => {
   ukupanBroj++;
     work+=`<div class="card"  id="javaScId" >
     <img src=${elementt.photoUrl}
-    class="card-img-top" alt="...">
+    class="card-img-top" alt="..." >
     <div class="card-body">
       <p class="card-text">${elementt.name} </p>
       <button type="button" onclick="dopuniVrijednosti(${elementt.id})" id="promijeni" class="btn btn-warning" data-bs-toggle="modal"
