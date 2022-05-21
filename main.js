@@ -1,6 +1,6 @@
 let a=0;
 let usluga = [];
-let ukupanBroj=1;
+let ukupanBroj=0;
 fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Services')
 .then(res=>{if(!res.ok)throw 'greska';return res.json()})
 .then(data => {
@@ -28,6 +28,10 @@ usluga.forEach(elementt => {
   </div>`
 });
   rezult.innerHTML=work;
+}
+
+const ukupanBro=()=>{
+alert(`Ukupan broj usluga ${ukupanBroj}`);
 }
 
 const prikaziElement=(id)=>{
@@ -100,6 +104,8 @@ const izmijeniUsluge = () => {
   })
 }
 
+
+
 const izbrisiUslugu = (id) => { 
     fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Services/${id}`,{
       method: 'DELETE'
@@ -154,3 +160,7 @@ $('#exampleModal').on('hidden.bs.modal', function () {
 
 $('#exampleModal').modal('toggle');
 })
+
+
+
+
