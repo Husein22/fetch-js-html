@@ -11,14 +11,14 @@
 
 @media only screen and (max-width: 425px) {
  #inputPolje{
-     width: 35%;
+     width: 25%;
  }
  #pretrazi{
-    width: 25%;
+    width: 19%;
     color: white;
  }
  #navbarName{
-    width: 25%;
+    width: 15%;
  }
  #navbar{
     display: flex;
@@ -32,7 +32,7 @@
      display: flex;
      padding: 0% 15% 0% 15% ;
  }
- #javaScId{
+ #javaScId.card{
     display: flex;
       justify-content: center; 
  }
@@ -55,14 +55,14 @@
 
 @media only screen and (max-width: 1024px) {
     #inputPolje{
-        width: 35%;
+        width: 45%;
     }
     #pretrazi{
-       width: 25%;
+       width: 35%;
        color: white;
     }
     #navbarName{
-       width: 25%;
+       width: 35%;
     }
     #foram{
         justify-content: flex-end;
@@ -76,12 +76,8 @@
         display: flex;
         padding: 0% 15% 0% 15% ;
     }
-    #javaScId{
-       display: flex;
-         justify-content: center; 
-    }
-    #dodajUslugu{
-       background-color: green;
+    #javaScId.card{
+         width: 300px;
     }
     #promijeni{
        background-color: red;
@@ -95,3 +91,6 @@
        color: black;
     }
    }
+
+
+   
