@@ -31,22 +31,16 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
-#services1{
-    width: 100%;
-    display: flex;
-    padding: 0% 5% 0% 5% ;
-    margin: 0%;
-}
-#javaScId.card{
-     width: 300px;
-}
+
  #dodajUslugu{
     background-color: green;
  }
+
+
  #services1{
     width: 100%;
     display: flex;
-    padding: 0% 20% 0% 20% ;
+    padding: 0% 0% 0% 0% ;
 }
 .card{
      width: 400px;
@@ -55,6 +49,12 @@
 .card-img-top{
     height:350px
 }
+#javaScId{
+    height: 400px;
+    width: 500px;
+}
+
+
  #promijeni{
     background-color: red;
  }
