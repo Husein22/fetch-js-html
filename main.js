@@ -153,5 +153,4 @@ $('#exampleModal').on('hidden.bs.modal', function () {
 });
 
 $('#exampleModal').modal('toggle');
- 
 })
