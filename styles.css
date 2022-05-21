@@ -9,33 +9,44 @@
     margin:5px;
 }
 
+.card{
+    width: 22rem;
+    margin:10px;
+}
+#services1{
+    width: 100%;
+    display: flex;
+    padding: 0% 6% 0% 6% ;
+}
+.card-img-top{height:250px}
+
 @media only screen and (max-width: 425px) {
  #inputPolje{
-     width: 25%;
- }
- #pretrazi{
-    width: 19%;
-    color: white;
- }
- #navbarName{
-    width: 15%;
- }
- #navbar{
-    display: flex;
-    justify-content: space-between;
+    width: 35%;
 }
- #foram{
+#pretrazi{
+   width: 35%;
+   color: white;
+}
+#navbarName{
+   width: 25%;
+}
+#foram{
     justify-content: flex-end;
+    width: 90%;
 }
- #services1{
-     width: 100%;
-     display: flex;
-     padding: 0% 15% 0% 15% ;
- }
- #javaScId.card{
+#navbar{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#services1{
+    width: 100%;
     display: flex;
-      justify-content: center; 
- }
+    padding: 0% 15% 0% 15% ;
+}
+#javaScId.card{
+     width: 300px;
+}
  #dodajUslugu{
     background-color: green;
  }
@@ -54,16 +65,7 @@
 
 
 @media only screen and (max-width: 1024px) {
-    #inputPolje{
-        width: 45%;
-    }
-    #pretrazi{
-       width: 35%;
-       color: white;
-    }
-    #navbarName{
-       width: 35%;
-    }
+   
     #foram{
         justify-content: flex-end;
     }
@@ -71,26 +73,73 @@
         display: flex;
         justify-content: space-between;
     }
+    #dodajUslugu{
+        background-color: yellow;
+        color: black;
+     }
     #services1{
         width: 100%;
         display: flex;
         padding: 0% 15% 0% 15% ;
     }
-    #javaScId.card{
+    .card{
          width: 300px;
     }
     #promijeni{
-       background-color: red;
+       background-color: green;
+       color: white;
     }
     #brisanje{
-       background-color: green;
-       color: black;
-    }
-    #prikazi{
        background-color: yellow;
        color: black;
     }
+    #prikazi{
+       background-color: red;
+    }
    }
+
+
+
+   @media only screen and (max-width: 768px) {
+   
+    #foram{
+        justify-content: flex-end;
+    }
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    #dodajUslugu{
+        background-color: yellow;
+        color: black;
+     }
+    #services1{
+        width: 100%;
+        display: flex;
+        padding: 0% 20% 0% 20% ;
+    }
+    .card{
+         width: 400px;
+         height: 400px;
+    }
+    .card-img-top{
+        height:350px
+    }
+    #promijeni{
+       background-color: green;
+       color: white;
+    }
+    #brisanje{
+       background-color: yellow;
+       color: black;
+    }
+    #prikazi{
+       background-color: red;
+    }
+   }
+
+
+   
 
 
    

@@ -14,9 +14,9 @@ const rezult =document.getElementById('services1');
 let work='';
 usluga.forEach(elementt => {
   ukupanBroj++;
-    work+=`<div class="card" style="width: 18rem;margin:10px;" id="javaScId" >
+    work+=`<div class="card"  id="javaScId" >
     <img src=${elementt.photoUrl}
-    class="card-img-top" alt="..." style="height:150px">
+    class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">${elementt.name} </p>
       <button type="button" onclick="dopuniVrijednosti(${elementt.id})" id="promijeni" class="btn btn-warning" data-bs-toggle="modal"
