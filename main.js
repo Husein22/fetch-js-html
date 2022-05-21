@@ -14,15 +14,15 @@ const rezult =document.getElementById('services1');
 let work='';
 usluga.forEach(elementt => {
   ukupanBroj++;
-    work+=`<div class="card" style="width: 18rem;margin:10px;" >
+    work+=`<div class="card" style="width: 18rem;margin:10px;" id="javaScId" >
     <img src=${elementt.photoUrl}
     class="card-img-top" alt="..." style="height:150px">
     <div class="card-body">
       <p class="card-text">${elementt.name} </p>
-      <button type="button" onclick="dopuniVrijednosti(${elementt.id})"  class="btn btn-warning" data-bs-toggle="modal"
+      <button type="button" onclick="dopuniVrijednosti(${elementt.id})" id="promijeni" class="btn btn-warning" data-bs-toggle="modal"
        data-bs-target="#exampleModal2" data-bs-whatever="@getbootstrap">Promijeni</button>
-       <button type="button" class="btn btn-danger" onclick="izbrisiUslugu(${elementt.id})">Brisanje</button>
-       <button type="button" onclick="prikaziElement(${elementt.id})" class="btn btn-success" data-bs-toggle="modal"
+       <button type="button" class="btn btn-danger" id="brisanje" onclick="izbrisiUslugu(${elementt.id})">Brisanje</button>
+       <button type="button" onclick="prikaziElement(${elementt.id})" id="prikazi" class="btn btn-success" data-bs-toggle="modal"
        data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap">Prikazi info</button>
     </div>
   </div>`

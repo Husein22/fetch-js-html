@@ -8,3 +8,90 @@
     height: 90%;
     margin:5px;
 }
+
+@media only screen and (max-width: 425px) {
+ #inputPolje{
+     width: 35%;
+ }
+ #pretrazi{
+    width: 25%;
+    color: white;
+ }
+ #navbarName{
+    width: 25%;
+ }
+ #navbar{
+    display: flex;
+    justify-content: space-between;
+}
+ #foram{
+    justify-content: flex-end;
+}
+ #services1{
+     width: 100%;
+     display: flex;
+     padding: 0% 15% 0% 15% ;
+ }
+ #javaScId{
+    display: flex;
+      justify-content: center; 
+ }
+ #dodajUslugu{
+    background-color: green;
+ }
+ #promijeni{
+    background-color: red;
+ }
+ #brisanje{
+    background-color: green;
+    color: black;
+ }
+ #prikazi{
+    background-color: yellow;
+    color: black;
+ }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #inputPolje{
+        width: 35%;
+    }
+    #pretrazi{
+       width: 25%;
+       color: white;
+    }
+    #navbarName{
+       width: 25%;
+    }
+    #foram{
+        justify-content: flex-end;
+    }
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    #services1{
+        width: 100%;
+        display: flex;
+        padding: 0% 15% 0% 15% ;
+    }
+    #javaScId{
+       display: flex;
+         justify-content: center; 
+    }
+    #dodajUslugu{
+       background-color: green;
+    }
+    #promijeni{
+       background-color: red;
+    }
+    #brisanje{
+       background-color: green;
+       color: black;
+    }
+    #prikazi{
+       background-color: yellow;
+       color: black;
+    }
+   }
